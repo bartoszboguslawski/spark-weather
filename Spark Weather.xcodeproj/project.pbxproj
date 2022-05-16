@@ -8,17 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		69FEE6402832C7D800DA358C /* Spark_WeatherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FEE63F2832C7D800DA358C /* Spark_WeatherApp.swift */; };
-		69FEE6422832C7D800DA358C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FEE6412832C7D800DA358C /* ContentView.swift */; };
+		69FEE6422832C7D800DA358C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FEE6412832C7D800DA358C /* MainView.swift */; };
 		69FEE6442832C7DA00DA358C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69FEE6432832C7DA00DA358C /* Assets.xcassets */; };
 		69FEE6472832C7DA00DA358C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69FEE6462832C7DA00DA358C /* Preview Assets.xcassets */; };
+		69FEE65B2832D13000DA358C /* ContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FEE65A2832D13000DA358C /* ContentModel.swift */; };
+		69FEE65D2832D46200DA358C /* RequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FEE65C2832D46200DA358C /* RequestView.swift */; };
+		69FEE65F2832E01900DA358C /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FEE65E2832E01900DA358C /* LaunchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		69FEE63C2832C7D800DA358C /* Spark Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Spark Weather.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		69FEE63F2832C7D800DA358C /* Spark_WeatherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spark_WeatherApp.swift; sourceTree = "<group>"; };
-		69FEE6412832C7D800DA358C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		69FEE6412832C7D800DA358C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		69FEE6432832C7DA00DA358C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		69FEE6462832C7DA00DA358C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		69FEE65A2832D13000DA358C /* ContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentModel.swift; sourceTree = "<group>"; };
+		69FEE65C2832D46200DA358C /* RequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestView.swift; sourceTree = "<group>"; };
+		69FEE65E2832E01900DA358C /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +58,10 @@
 			isa = PBXGroup;
 			children = (
 				69FEE63F2832C7D800DA358C /* Spark_WeatherApp.swift */,
-				69FEE6412832C7D800DA358C /* ContentView.swift */,
+				69FEE64E2832CA1200DA358C /* Views */,
+				69FEE6562832D06A00DA358C /* ViewModels */,
+				69FEE6572832D07400DA358C /* Models */,
+				69FEE64D2832CA0100DA358C /* Managers */,
 				69FEE6432832C7DA00DA358C /* Assets.xcassets */,
 				69FEE6452832C7DA00DA358C /* Preview Content */,
 			);
@@ -65,6 +74,38 @@
 				69FEE6462832C7DA00DA358C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		69FEE64D2832CA0100DA358C /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		69FEE64E2832CA1200DA358C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				69FEE6412832C7D800DA358C /* MainView.swift */,
+				69FEE65C2832D46200DA358C /* RequestView.swift */,
+				69FEE65E2832E01900DA358C /* LaunchView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		69FEE6562832D06A00DA358C /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				69FEE65A2832D13000DA358C /* ContentModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		69FEE6572832D07400DA358C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +178,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69FEE6422832C7D800DA358C /* ContentView.swift in Sources */,
+				69FEE65F2832E01900DA358C /* LaunchView.swift in Sources */,
+				69FEE6422832C7D800DA358C /* MainView.swift in Sources */,
+				69FEE65D2832D46200DA358C /* RequestView.swift in Sources */,
+				69FEE65B2832D13000DA358C /* ContentModel.swift in Sources */,
 				69FEE6402832C7D800DA358C /* Spark_WeatherApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,6 +314,7 @@
 				DEVELOPMENT_TEAM = F442RAMZD9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Share your location for accurate weather.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +344,7 @@
 				DEVELOPMENT_TEAM = F442RAMZD9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Share your location for accurate weather.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

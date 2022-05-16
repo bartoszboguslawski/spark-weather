@@ -11,7 +11,8 @@ import SwiftUI
 struct Spark_WeatherApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LaunchView()
+                .environmentObject(LocationManager())
         }
     }
 }
