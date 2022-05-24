@@ -8,16 +8,16 @@
 import SwiftUI
 
 struct MainView: View {
-
+    
+    @EnvironmentObject var weather: ContentModel
+    var model: WeatherModel
+    
     var body: some View {
         VStack {
-            Text("ok")
+            Text(model.timezone)
+            Text("\(String(model.current.temp)) Celcius")
         }
     }
 }
 
-struct MainView_Previews: PreviewProvider {
-    static var previews: some View {
-        MainView()
-    }
-}
+

@@ -9,8 +9,7 @@ import SwiftUI
 
 struct RequestView: View {
     
-    @EnvironmentObject var model: LocationManager
-    @State var showingMainView = false
+    @EnvironmentObject var weather: ContentModel
     
     var body: some View {
         VStack(spacing: 10) {
@@ -19,14 +18,8 @@ struct RequestView: View {
                 .fontWeight(.bold)
             Text("Please share your location in settings to access weather in your area.")
                 .padding()
-            
             Button {
-                if let url = URL(string: UIApplication.openSettingsURLString) {
-                    
-                    if UIApplication.shared.canOpenURL(url) {
-                        UIApplication.shared.open(url, options: [:], completionHandler: nil)
-                    }
-                }
+                weather.requestLocation()
             } label: {
                 ZStack {
                     Rectangle()

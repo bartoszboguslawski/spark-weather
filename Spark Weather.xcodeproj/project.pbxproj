@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		69D52771283670AD006E5CE4 /* ForbiddenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D52770283670AD006E5CE4 /* ForbiddenView.swift */; };
+		69F0DCBE283CE3D200E9FFC6 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F0DCBD283CE3D200E9FFC6 /* WeatherModel.swift */; };
+		69FDA9D62836CA6400A508BE /* WeatherPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FDA9D52836CA6400A508BE /* WeatherPreview.swift */; };
+		69FDA9D82836CAA000A508BE /* weatherdata.json in Resources */ = {isa = PBXBuildFile; fileRef = 69FDA9D72836CAA000A508BE /* weatherdata.json */; };
 		69FEE6402832C7D800DA358C /* Spark_WeatherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FEE63F2832C7D800DA358C /* Spark_WeatherApp.swift */; };
 		69FEE6422832C7D800DA358C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FEE6412832C7D800DA358C /* MainView.swift */; };
 		69FEE6442832C7DA00DA358C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69FEE6432832C7DA00DA358C /* Assets.xcassets */; };
@@ -17,6 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		69D52770283670AD006E5CE4 /* ForbiddenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForbiddenView.swift; sourceTree = "<group>"; };
+		69F0DCBD283CE3D200E9FFC6 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		69FDA9D52836CA6400A508BE /* WeatherPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherPreview.swift; sourceTree = "<group>"; };
+		69FDA9D72836CAA000A508BE /* weatherdata.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = weatherdata.json; sourceTree = "<group>"; };
 		69FEE63C2832C7D800DA358C /* Spark Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Spark Weather.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		69FEE63F2832C7D800DA358C /* Spark_WeatherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spark_WeatherApp.swift; sourceTree = "<group>"; };
 		69FEE6412832C7D800DA358C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -38,6 +46,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		69F0DCBC283CE3C100E9FFC6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				69F0DCBD283CE3D200E9FFC6 /* WeatherModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		69FDA9D32836C68100A508BE /* Entry */ = {
+			isa = PBXGroup;
+			children = (
+				69FEE65E2832E01900DA358C /* LaunchView.swift */,
+				69FEE65C2832D46200DA358C /* RequestView.swift */,
+				69D52770283670AD006E5CE4 /* ForbiddenView.swift */,
+			);
+			path = Entry;
+			sourceTree = "<group>";
+		};
+		69FDA9D42836C6A100A508BE /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				69FEE6412832C7D800DA358C /* MainView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		69FEE6332832C7D800DA358C = {
 			isa = PBXGroup;
 			children = (
@@ -60,8 +94,8 @@
 				69FEE63F2832C7D800DA358C /* Spark_WeatherApp.swift */,
 				69FEE64E2832CA1200DA358C /* Views */,
 				69FEE6562832D06A00DA358C /* ViewModels */,
-				69FEE6572832D07400DA358C /* Models */,
-				69FEE64D2832CA0100DA358C /* Managers */,
+				69F0DCBC283CE3C100E9FFC6 /* Models */,
+				69FEE6572832D07400DA358C /* Helpers */,
 				69FEE6432832C7DA00DA358C /* Assets.xcassets */,
 				69FEE6452832C7DA00DA358C /* Preview Content */,
 			);
@@ -72,23 +106,16 @@
 			isa = PBXGroup;
 			children = (
 				69FEE6462832C7DA00DA358C /* Preview Assets.xcassets */,
+				69FDA9D52836CA6400A508BE /* WeatherPreview.swift */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		69FEE64D2832CA0100DA358C /* Managers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Managers;
 			sourceTree = "<group>";
 		};
 		69FEE64E2832CA1200DA358C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				69FEE6412832C7D800DA358C /* MainView.swift */,
-				69FEE65C2832D46200DA358C /* RequestView.swift */,
-				69FEE65E2832E01900DA358C /* LaunchView.swift */,
+				69FDA9D32836C68100A508BE /* Entry */,
+				69FDA9D42836C6A100A508BE /* Main */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -101,11 +128,12 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		69FEE6572832D07400DA358C /* Models */ = {
+		69FEE6572832D07400DA358C /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				69FDA9D72836CAA000A508BE /* weatherdata.json */,
 			);
-			path = Models;
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,6 +195,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				69FEE6472832C7DA00DA358C /* Preview Assets.xcassets in Resources */,
+				69FDA9D82836CAA000A508BE /* weatherdata.json in Resources */,
 				69FEE6442832C7DA00DA358C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -179,9 +208,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				69FEE65F2832E01900DA358C /* LaunchView.swift in Sources */,
+				69FDA9D62836CA6400A508BE /* WeatherPreview.swift in Sources */,
 				69FEE6422832C7D800DA358C /* MainView.swift in Sources */,
 				69FEE65D2832D46200DA358C /* RequestView.swift in Sources */,
+				69F0DCBE283CE3D200E9FFC6 /* WeatherModel.swift in Sources */,
 				69FEE65B2832D13000DA358C /* ContentModel.swift in Sources */,
+				69D52771283670AD006E5CE4 /* ForbiddenView.swift in Sources */,
 				69FEE6402832C7D800DA358C /* Spark_WeatherApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,6 +352,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -350,6 +383,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
