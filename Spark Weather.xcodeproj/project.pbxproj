@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		69D52771283670AD006E5CE4 /* ForbiddenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D52770283670AD006E5CE4 /* ForbiddenView.swift */; };
 		69F0DCBE283CE3D200E9FFC6 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F0DCBD283CE3D200E9FFC6 /* WeatherModel.swift */; };
+		69F0DCC0283D2A3900E9FFC6 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F0DCBF283D2A3900E9FFC6 /* Colors.swift */; };
+		69F0DCC3283D39C600E9FFC6 /* Tab1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F0DCC2283D39C600E9FFC6 /* Tab1View.swift */; };
+		69F0DCC5283D3D7B00E9FFC6 /* GradientBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F0DCC4283D3D7B00E9FFC6 /* GradientBackground.swift */; };
+		69F0DCC7283D3FF700E9FFC6 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F0DCC6283D3FF700E9FFC6 /* LoadingView.swift */; };
+		69F0DCCA283D40DE00E9FFC6 /* GradientBackground2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F0DCC9283D40DE00E9FFC6 /* GradientBackground2.swift */; };
+		69F0DCD1283E289E00E9FFC6 /* Tab2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F0DCD0283E289E00E9FFC6 /* Tab2View.swift */; };
+		69F0DCD5283E357B00E9FFC6 /* DailyRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F0DCD4283E357B00E9FFC6 /* DailyRow.swift */; };
 		69FDA9D62836CA6400A508BE /* WeatherPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FDA9D52836CA6400A508BE /* WeatherPreview.swift */; };
 		69FDA9D82836CAA000A508BE /* weatherdata.json in Resources */ = {isa = PBXBuildFile; fileRef = 69FDA9D72836CAA000A508BE /* weatherdata.json */; };
 		69FEE6402832C7D800DA358C /* Spark_WeatherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FEE63F2832C7D800DA358C /* Spark_WeatherApp.swift */; };
@@ -23,6 +30,13 @@
 /* Begin PBXFileReference section */
 		69D52770283670AD006E5CE4 /* ForbiddenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForbiddenView.swift; sourceTree = "<group>"; };
 		69F0DCBD283CE3D200E9FFC6 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		69F0DCBF283D2A3900E9FFC6 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		69F0DCC2283D39C600E9FFC6 /* Tab1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab1View.swift; sourceTree = "<group>"; };
+		69F0DCC4283D3D7B00E9FFC6 /* GradientBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackground.swift; sourceTree = "<group>"; };
+		69F0DCC6283D3FF700E9FFC6 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		69F0DCC9283D40DE00E9FFC6 /* GradientBackground2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackground2.swift; sourceTree = "<group>"; };
+		69F0DCD0283E289E00E9FFC6 /* Tab2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab2View.swift; sourceTree = "<group>"; };
+		69F0DCD4283E357B00E9FFC6 /* DailyRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyRow.swift; sourceTree = "<group>"; };
 		69FDA9D52836CA6400A508BE /* WeatherPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherPreview.swift; sourceTree = "<group>"; };
 		69FDA9D72836CAA000A508BE /* weatherdata.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = weatherdata.json; sourceTree = "<group>"; };
 		69FEE63C2832C7D800DA358C /* Spark Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Spark Weather.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,12 +68,32 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		69F0DCC1283D39B500E9FFC6 /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				69F0DCC2283D39C600E9FFC6 /* Tab1View.swift */,
+				69F0DCD0283E289E00E9FFC6 /* Tab2View.swift */,
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
+		69F0DCC8283D40AF00E9FFC6 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				69F0DCC4283D3D7B00E9FFC6 /* GradientBackground.swift */,
+				69F0DCC9283D40DE00E9FFC6 /* GradientBackground2.swift */,
+				69F0DCBF283D2A3900E9FFC6 /* Colors.swift */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
 		69FDA9D32836C68100A508BE /* Entry */ = {
 			isa = PBXGroup;
 			children = (
 				69FEE65E2832E01900DA358C /* LaunchView.swift */,
 				69FEE65C2832D46200DA358C /* RequestView.swift */,
 				69D52770283670AD006E5CE4 /* ForbiddenView.swift */,
+				69F0DCC6283D3FF700E9FFC6 /* LoadingView.swift */,
 			);
 			path = Entry;
 			sourceTree = "<group>";
@@ -68,6 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				69FEE6412832C7D800DA358C /* MainView.swift */,
+				69F0DCC1283D39B500E9FFC6 /* Tabs */,
+				69F0DCD4283E357B00E9FFC6 /* DailyRow.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -95,9 +131,10 @@
 				69FEE64E2832CA1200DA358C /* Views */,
 				69FEE6562832D06A00DA358C /* ViewModels */,
 				69F0DCBC283CE3C100E9FFC6 /* Models */,
+				69F0DCC8283D40AF00E9FFC6 /* Colors */,
 				69FEE6572832D07400DA358C /* Helpers */,
-				69FEE6432832C7DA00DA358C /* Assets.xcassets */,
 				69FEE6452832C7DA00DA358C /* Preview Content */,
+				69FEE6432832C7DA00DA358C /* Assets.xcassets */,
 			);
 			path = "Spark Weather";
 			sourceTree = "<group>";
@@ -207,13 +244,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69F0DCC3283D39C600E9FFC6 /* Tab1View.swift in Sources */,
 				69FEE65F2832E01900DA358C /* LaunchView.swift in Sources */,
+				69F0DCC5283D3D7B00E9FFC6 /* GradientBackground.swift in Sources */,
+				69F0DCD1283E289E00E9FFC6 /* Tab2View.swift in Sources */,
+				69F0DCC0283D2A3900E9FFC6 /* Colors.swift in Sources */,
+				69F0DCCA283D40DE00E9FFC6 /* GradientBackground2.swift in Sources */,
 				69FDA9D62836CA6400A508BE /* WeatherPreview.swift in Sources */,
+				69F0DCC7283D3FF700E9FFC6 /* LoadingView.swift in Sources */,
 				69FEE6422832C7D800DA358C /* MainView.swift in Sources */,
 				69FEE65D2832D46200DA358C /* RequestView.swift in Sources */,
 				69F0DCBE283CE3D200E9FFC6 /* WeatherModel.swift in Sources */,
 				69FEE65B2832D13000DA358C /* ContentModel.swift in Sources */,
 				69D52771283670AD006E5CE4 /* ForbiddenView.swift in Sources */,
+				69F0DCD5283E357B00E9FFC6 /* DailyRow.swift in Sources */,
 				69FEE6402832C7D800DA358C /* Spark_WeatherApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

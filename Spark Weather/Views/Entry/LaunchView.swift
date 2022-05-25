@@ -19,9 +19,8 @@ struct LaunchView: View {
                 if let model = weather.weatherData {
                     MainView(model: model)
                 } else {
-                    ProgressView()
+                    LoadingView()
                 }
-                
             } else {
                 ForbiddenView()
             }

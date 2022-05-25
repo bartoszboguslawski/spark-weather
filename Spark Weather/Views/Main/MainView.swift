@@ -13,9 +13,26 @@ struct MainView: View {
     var model: WeatherModel
     
     var body: some View {
-        VStack {
-            Text(model.timezone)
-            Text("\(String(model.current.temp)) Celcius")
+        ZStack {
+            GradientBackground()
+            ScrollView {
+                VStack {
+                    TabView {
+                        Tab1View(model: model)
+                        Tab2View(model: model)
+                    }
+                    .frame(height: 250, alignment: .center)
+                    .cornerRadius(10)
+                    .tabViewStyle(PageTabViewStyle())
+                    .padding()
+                    Spacer()
+                    
+                    ForEach(model.daily) { day in
+                        DailyRow(model: model, min: day.temp.min, max: day.temp.max)
+                    }
+                    
+                }
+            }
         }
     }
 }

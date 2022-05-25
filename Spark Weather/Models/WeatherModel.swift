@@ -14,7 +14,7 @@ struct WeatherModel: Decodable {
     let current: Current
     let minutely: [Minutely]?
     let hourly: [Current]?
-    let daily: [Daily]?
+    let daily: [Daily]
     let alerts: [Alert]?
 
     enum CodingKeys: String, CodingKey {
@@ -42,13 +42,13 @@ struct Current: Decodable {
     let dt: Int?
     let sunrise, sunset: Int?
     let temp, feelsLike: Double
-    let pressure, humidity: Int?
+    let pressure, humidity: Int
     let dewPoint, uvi: Double?
-    let clouds, visibility: Int?
-    let windSpeed: Double?
+    let clouds, visibility: Int
+    let windSpeed: Double
     let windDeg: Int?
     let windGust: Double?
-    let weather: [Weather]?
+    let weather: [Weather]
     let pop: Double?
 
     enum CodingKeys: String, CodingKey {
@@ -65,9 +65,9 @@ struct Current: Decodable {
 }
 
 // MARK: - Weather
-struct Weather: Decodable {
+struct Weather: Decodable, Hashable {
     let id: Int?
-    let main, weatherDescription, icon: String?
+    let main, weatherDescription, icon: String
 
     enum CodingKeys: String, CodingKey {
         case id, main
@@ -77,11 +77,13 @@ struct Weather: Decodable {
 }
 
 // MARK: - Daily
-struct Daily: Decodable {
+struct Daily: Decodable, Identifiable {
+    var id = UUID()
+    
     let dt, sunrise, sunset, moonrise: Int?
     let moonset: Int?
     let moonPhase: Double?
-    let temp: Temp?
+    let temp: Temp
     let feelsLike: FeelsLike?
     let pressure, humidity: Int?
     let dewPoint, windSpeed: Double?
@@ -112,12 +114,12 @@ struct FeelsLike: Decodable {
 
 // MARK: - Temp
 struct Temp: Decodable {
-    let day, min, max, night: Double?
+    let day, min, max, night: Double
     let eve, morn: Double?
 }
 
 // MARK: - Minutely
 struct Minutely: Decodable {
-    let dt, precipitation: Int?
+    let dt, precipitation: Double?
 }
 

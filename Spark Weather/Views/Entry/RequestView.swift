@@ -10,33 +10,59 @@ import SwiftUI
 struct RequestView: View {
     
     @EnvironmentObject var weather: ContentModel
+    @State var animate: Bool = false
     
     var body: some View {
-        VStack(spacing: 10) {
-            Text("Welcome to the Spark Weather.")
-                .font(.title)
-                .fontWeight(.bold)
-            Text("Please share your location in settings to access weather in your area.")
-                .padding()
-            Button {
-                weather.requestLocation()
-            } label: {
-                ZStack {
-                    Rectangle()
-                        
-                    HStack {
-                        Image(systemName: "location")
-                        Text("Share your location")
+        ZStack {
+            GradientBackground()
+            VStack(spacing: 10) {
+                Image("logo")
+                    .resizable()
+                    .frame(width: 250, height: 200)
+                    .padding(.bottom, 50)
+                Text("Welcome to the Spark Weather.")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .foregroundColor(Color.white)
+                Text("Please share your location in settings to access weather in your area.")
+                    .padding()
+                    .foregroundColor(Color.white)
+                Button {
+                    weather.requestLocation()
+                } label: {
+                    ZStack {
+                        Rectangle()
+                            .foregroundColor(animate ? Color.black : Color.theme.secondary)
+                            .opacity(0.9)
+                            
+                        HStack {
+                            Image(systemName: "location")
+                            Text("Share your location")
+                        }
+                        .foregroundColor(.white)
                     }
-                    .foregroundColor(.white)
+                    .frame(height: 50)
+                    .cornerRadius(10)
+                    .padding(.horizontal, 50)
                 }
-                .frame(width: 220, height: 50)
-                .cornerRadius(10)
             }
-
+            .multilineTextAlignment(.center)
+            .onAppear(perform: animation)
         }
-        .multilineTextAlignment(.center)
     }
+    
+    private func animation() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            withAnimation(
+                Animation
+                    .easeInOut(duration: 4.0)
+                    .repeatForever()
+            ) {
+                animate.toggle()
+            }
+        }
+    }
+    
 }
 
 struct RequestView_Previews: PreviewProvider {
