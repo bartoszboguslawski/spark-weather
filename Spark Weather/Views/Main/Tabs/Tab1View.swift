@@ -17,17 +17,22 @@ struct Tab1View: View {
                 .opacity(0.4)
             VStack {
                 HStack {
-                    Image(systemName: "cloud.fill")
-                        .resizable()
-                        .frame(width: 100, height: 70)
-                        .foregroundColor(Color.theme.background2)
+                    ForEach(model.current.weather) { id in
+                        AsyncImage(url: URL(string: "https://openweathermap.org/img/wn/\(id.icon)@2x.png")) { image in
+                            image
+                                .resizable()
+                                .frame(width: 120, height: 120)
+                        } placeholder: {
+                            ProgressView()
+                        }
+                    }
                     Spacer()
                     Text("\(round(model.current.temp), specifier: "%g")°")
                         .font(.system(size: 90, weight: .regular, design: .default))
                     .foregroundColor(Color.white)
                 }
                 .padding(.horizontal, 40.0)
-                ForEach(model.current.weather, id: \.self) { r in
+                ForEach(model.current.weather) { r in
                     Text(r.main)
                         .font(.title2)
                         .foregroundColor(Color.white)

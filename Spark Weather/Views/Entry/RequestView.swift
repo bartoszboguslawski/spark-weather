@@ -18,15 +18,15 @@ struct RequestView: View {
             VStack(spacing: 10) {
                 Image("logo")
                     .resizable()
-                    .frame(width: 250, height: 200)
+                    .frame(width: 250, height: 187)
                     .padding(.bottom, 50)
                 Text("Welcome to the Spark Weather.")
                     .font(.title)
                     .fontWeight(.bold)
-                    .foregroundColor(Color.white)
+                    .foregroundColor(Color.theme.secondary)
                 Text("Please share your location in settings to access weather in your area.")
                     .padding()
-                    .foregroundColor(Color.white)
+                    .foregroundColor(Color.theme.secondary)
                 Button {
                     weather.requestLocation()
                 } label: {

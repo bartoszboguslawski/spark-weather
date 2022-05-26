@@ -79,6 +79,10 @@ class ContentModel: NSObject, ObservableObject, CLLocationManagerDelegate {
                     
                     let result = try JSONDecoder().decode(WeatherModel.self, from: data)
                     
+//                    for i in result.current.weather {
+//                        i.getIcon()
+//                    }
+                    
                     DispatchQueue.main.async {
                         self.weatherData = result
                     }

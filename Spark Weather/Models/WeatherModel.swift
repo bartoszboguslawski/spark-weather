@@ -13,7 +13,7 @@ struct WeatherModel: Decodable {
     let timezoneOffset: Int?
     let current: Current
     let minutely: [Minutely]?
-    let hourly: [Current]?
+    let hourly: [Current]
     let daily: [Daily]
     let alerts: [Alert]?
 
@@ -38,8 +38,8 @@ struct Alert: Decodable {
 }
 
 // MARK: - Current
-struct Current: Decodable {
-    let dt: Int?
+class Current: Decodable, Identifiable {
+    let dt: Int
     let sunrise, sunset: Int?
     let temp, feelsLike: Double
     let pressure, humidity: Int
@@ -65,9 +65,10 @@ struct Current: Decodable {
 }
 
 // MARK: - Weather
-struct Weather: Decodable, Hashable {
+class Weather: Decodable, Identifiable {
     let id: Int?
-    let main, weatherDescription, icon: String
+    let main, weatherDescription: String
+    let icon: String
 
     enum CodingKeys: String, CodingKey {
         case id, main
@@ -77,10 +78,8 @@ struct Weather: Decodable, Hashable {
 }
 
 // MARK: - Daily
-struct Daily: Decodable, Identifiable {
-    var id = UUID()
-    
-    let dt, sunrise, sunset, moonrise: Int?
+class Daily: Decodable, Identifiable {  
+    let dt, sunrise, sunset, moonrise: Int
     let moonset: Int?
     let moonPhase: Double?
     let temp: Temp
@@ -89,7 +88,7 @@ struct Daily: Decodable, Identifiable {
     let dewPoint, windSpeed: Double?
     let windDeg: Int?
     let windGust: Double?
-    let weather: [Weather]?
+    let weather: [Weather]
     let clouds: Int?
     let pop, rain, uvi: Double?
 
