@@ -13,7 +13,8 @@ extension Color {
 }
 
 struct ColorTheme {
-    let secondary = Color("SecondaryColor")
+    let secondaryColor = Color("SecondaryColor")
     let background1 = Color("BackgroundColor1")
     let background2 = Color("BackgroundColor2")
+    let tabcolor = Color("TabColor")
 }

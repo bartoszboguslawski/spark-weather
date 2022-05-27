@@ -26,6 +26,7 @@ struct MainView: View {
                     .cornerRadius(10)
                     .tabViewStyle(PageTabViewStyle())
                     .padding()
+                    .foregroundColor(Color.theme.tabcolor)
                     
                     ScrollView(.horizontal) {
                         HStack {

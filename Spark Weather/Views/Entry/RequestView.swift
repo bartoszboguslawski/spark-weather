@@ -23,17 +23,14 @@ struct RequestView: View {
                 Text("Welcome to the Spark Weather.")
                     .font(.title)
                     .fontWeight(.bold)
-                    .foregroundColor(Color.theme.secondary)
-                Text("Please share your location in settings to access weather in your area.")
+                Text("Please share your location to access weather in your area.")
                     .padding()
-                    .foregroundColor(Color.theme.secondary)
                 Button {
                     weather.requestLocation()
                 } label: {
                     ZStack {
                         Rectangle()
-                            .foregroundColor(animate ? Color.black : Color.theme.secondary)
-                            .opacity(0.9)
+                            .foregroundColor(animate ? Color.black : Color.theme.secondaryColor)
                             
                         HStack {
                             Image(systemName: "location")
@@ -48,6 +45,7 @@ struct RequestView: View {
             }
             .multilineTextAlignment(.center)
             .onAppear(perform: animation)
+            .foregroundColor(Color.theme.secondaryColor)
         }
     }
     

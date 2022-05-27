@@ -33,6 +33,6 @@ struct HourlyRow: View {
             Text("\(round(temp), specifier: "%g")°")
         }
         .frame(width: 60, height: 90)
-        .foregroundColor(Color.theme.secondary)
+        .foregroundColor(Color.theme.secondaryColor)
     }
 }

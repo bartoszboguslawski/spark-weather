@@ -37,7 +37,7 @@ struct DailyRow: View {
                     .font(.system(size: 20))
             }
             .padding(.horizontal, 35)
-            .foregroundColor(Color.theme.secondary)
+            .foregroundColor(Color.theme.secondaryColor)
         }
     }
 }
