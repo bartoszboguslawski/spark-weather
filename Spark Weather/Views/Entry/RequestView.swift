@@ -60,7 +60,6 @@ struct RequestView: View {
             }
         }
     }
-    
 }
 
 struct RequestView_Previews: PreviewProvider {

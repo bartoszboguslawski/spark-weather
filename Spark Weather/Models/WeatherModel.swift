@@ -9,12 +9,12 @@ import Foundation
 
 struct WeatherModel: Decodable {
     let lat, lon: Double?
-    let timezone: String
+    let timezone: String?
     let timezoneOffset: Int?
-    let current: Current
+    let current: Current?
     let minutely: [Minutely]?
-    let hourly: [Current]
-    let daily: [Daily]
+    let hourly: [Current]?
+    let daily: [Daily]?
     let alerts: [Alert]?
 
     enum CodingKeys: String, CodingKey {
@@ -39,16 +39,16 @@ struct Alert: Decodable {
 
 // MARK: - Current
 class Current: Decodable, Identifiable {
-    let dt: Int
+    let dt: Int?
     let sunrise, sunset: Int?
-    let temp, feelsLike: Double
-    let pressure, humidity: Int
+    let temp, feelsLike: Double?
+    let pressure, humidity: Int?
     let dewPoint, uvi: Double?
-    let clouds, visibility: Int
-    let windSpeed: Double
+    let clouds, visibility: Int?
+    let windSpeed: Double?
     let windDeg: Int?
     let windGust: Double?
-    let weather: [Weather]
+    let weather: [Weather]?
     let pop: Double?
 
     enum CodingKeys: String, CodingKey {
@@ -67,8 +67,8 @@ class Current: Decodable, Identifiable {
 // MARK: - Weather
 class Weather: Decodable, Identifiable {
     let id: Int?
-    let main, weatherDescription: String
-    let icon: String
+    let main, weatherDescription: String?
+    let icon: String?
 
     enum CodingKeys: String, CodingKey {
         case id, main
@@ -79,16 +79,16 @@ class Weather: Decodable, Identifiable {
 
 // MARK: - Daily
 class Daily: Decodable, Identifiable {  
-    let dt, sunrise, sunset, moonrise: Int
+    let dt, sunrise, sunset, moonrise: Int?
     let moonset: Int?
     let moonPhase: Double?
-    let temp: Temp
+    let temp: Temp?
     let feelsLike: FeelsLike?
     let pressure, humidity: Int?
     let dewPoint, windSpeed: Double?
     let windDeg: Int?
     let windGust: Double?
-    let weather: [Weather]
+    let weather: [Weather]?
     let clouds: Int?
     let pop, rain, uvi: Double?
 
@@ -113,7 +113,7 @@ struct FeelsLike: Decodable {
 
 // MARK: - Temp
 struct Temp: Decodable {
-    let day, min, max, night: Double
+    let day, min, max, night: Double?
     let eve, morn: Double?
 }
 

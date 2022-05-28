@@ -15,42 +15,42 @@ struct Tab2View: View {
         ZStack {
             Rectangle()
                 .opacity(0.4)
-
-            VStack {
-                HStack {
-                    Text("Feels like:")
-                    Spacer()
-                    Text("\(round(model.current.feelsLike), specifier: "%g")°")
+            if model.current != nil {
+                VStack {
+                    HStack {
+                        Text("Feels like:")
+                        Spacer()
+                        Text("\(round(model.current!.feelsLike ?? 0), specifier: "%g")°")
+                    }
+                    Divider()
+                    HStack {
+                        Text("Pressure:")
+                        Spacer()
+                        Text("\(model.current!.pressure ?? 0) hPa")
+                    }
+                    Divider()
+                    HStack {
+                        Text("Wind:")
+                        Spacer()
+                        Text("\(model.current!.windSpeed ?? 0, specifier: "%g") km/h")
+                    }
+                    Divider()
+                    HStack {
+                        Text("Visibility:")
+                        Spacer()
+                        Text("\((model.current!.visibility ?? 0)/1000) km")
+                    }
+                    Divider()
+                    HStack {
+                        Text("Humidity:")
+                        Spacer()
+                        Text("\(model.current!.humidity ?? 0) %")
+                    }
                 }
-                Divider()
-                HStack {
-                    Text("Pressure:")
-                    Spacer()
-                    Text("\(model.current.pressure) hPa")
-                }
-                Divider()
-                HStack {
-                    Text("Wind:")
-                    Spacer()
-                    Text("\(model.current.windSpeed, specifier: "%g") km/h")
-                }
-                Divider()
-                HStack {
-                    Text("Visibility:")
-                    Spacer()
-                    Text("\(model.current.visibility/1000) km")
-                }
-                Divider()
-                HStack {
-                    Text("Humidity:")
-                    Spacer()
-                    Text("\(model.current.humidity) %")
-                }
-                
+                .font(.system(size: 20))
+                .foregroundColor(.white)
+                .padding()
             }
-            .font(.system(size: 20))
-            .foregroundColor(.white)
-            .padding()
         }
     }
 }

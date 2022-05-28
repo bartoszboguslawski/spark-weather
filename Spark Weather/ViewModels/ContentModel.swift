@@ -47,8 +47,8 @@ class ContentModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("Error getting location", error)
     }
-
-
+    
+// MARK: - API
     func dataRequest(lat: CLLocationDegrees, lon: CLLocationDegrees) {
         
         guard let url = URL(string: "https://api.openweathermap.org/data/3.0/onecall?lat=\(lat)&lon=\(lon)&appid=\(apiKey)&units=metric") else {

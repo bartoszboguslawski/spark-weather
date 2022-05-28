@@ -25,7 +25,6 @@ struct ForbiddenView: View {
                     ZStack {
                         Rectangle()
                             .foregroundColor(Color.theme.secondaryColor)
-                            
                         HStack {
                             Image(systemName: "location")
                             Text("Go to settings")
@@ -36,7 +35,6 @@ struct ForbiddenView: View {
                     .cornerRadius(10)
                     .padding(.horizontal, 50)
                 }
-
             }
             .multilineTextAlignment(.center)
             .foregroundColor(Color.theme.secondaryColor)

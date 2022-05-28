@@ -10,6 +10,7 @@ import SwiftUI
 struct LaunchView: View {
     
     @EnvironmentObject var weather: ContentModel
+    
     var body: some View {
         VStack {
             if weather.authorizationState == .notDetermined {
