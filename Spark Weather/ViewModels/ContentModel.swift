@@ -10,7 +10,7 @@ import CoreLocation
 
 class ContentModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     
-    private let apiKey = "2dc71d6c621cf96afd12b19fc208699f"
+    private let apiKey = ""
     @Published var weatherData: WeatherModel?
     
     var locationManager = CLLocationManager()
